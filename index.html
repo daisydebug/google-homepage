@@ -6,32 +6,83 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- Note to self: #id .class -->
         <style>
             body{
                 background-color: rgb(255, 255, 255);
             }
+            .wrapper{
+                margin:1em;
+            }
+            .top-left-links{
+                display:inline-block;
+                margin: 7px 0px 0px 10px;
+                float:left;
+                position:absolute;
+                font-size:13px;
+                opacity:0.75;
+            }
+            #about{
+                padding-left:15px;
+            }
+            #store{
+                padding-left:15px;
+            }
+            .top-right-links{
+                display:inline-block;
+                float:right;
+                padding:18px;
+                font-size:13px;
+                opacity:0.75;
+            }
+            #glyph{
+                display:inline-block;
+                float:right;
+                padding:12px;
+                font-size:20px;
+            }
+            #sign-in-button{
+                display:inline-block;
+                float:right;
+                padding:12px;
+                margin:1em;
+                font-size:12px;
+                font-weight:700;
+                border:1px solid #4285f4;
+                border-radius:2px;
+                color:white;
+                background-color:rgb(67,135,253);
+            }
+            .span-links{
+                display:inline;
+                float:center;
+                padding:18px;
+                font-size:13px;
+                opacity:0.75;
+            }
+
         </style>
+
     </head>
     <body>
         <div class="wrapper">
-            <header class="page-header">
-                </div>
-                <!-- Top Left Links -->
-                <div id="top-left-links">
-                    <a style="float:left;padding:12px;font-size:12px;">About</a>
-                    <a style="float:left;padding:12px;font-size:12px;">Store</a>
-                </div>
-                <!-- Top Right Buttons -->
-                <div id="top-right-buttons">
-                    <button class="sign-in-button" role="button" style="float:right;padding:12px;font-size:12px;">Sign In</button>
-                    <a title="Google apps" role="button" style="float:right;padding:12px;font-size:20px;"> <span class="glyphicon glyphicon-th"></span></a>
-                </div>
-                <!-- Top Right Links -->
-                <div id="top-right-links">
-                    <a style="float:right;padding:12px;font-size:12px;">Images</a>
-                    <a style="float:right;padding:12px;font-size:12px;">Gmail</a>
-                </div>
-            </header>
+            <!-- Top Left Links -->
+            <div class="top-left-links">
+                <a id="about" href="#" style="color:black;">About</a>
+                <a id="store" href="#" style="color:black;">Store</a>
+            </div>
+            <!-- Sign In Button -->
+            <div class="sign-in-button">
+                <button id="sign-in-button" role="button">Sign In</button>
+            <!-- Glyph -->
+            <div class="glyph"
+                <a id="glyph" title="Google apps" role="button"> <span class="glyphicon glyphicon-th"></span></a>
+            </div>
+            <!-- Top Right Links -->
+            <div class="top-right-links">
+                <a id="gmail" href="#" style="color:black;">Gmail</a>
+                <a id="images" href="#" style="color:black;">Images</a>
+            </div>
             <main class="page-main">
                 <!-- Google Logo -->
                 <div id="main" class="content" style="text-align:center">
@@ -52,24 +103,24 @@
                 <div class="buttons-under-bar" style="text-align:center">
                     <input id="google-search" value="Google Search" aria-label="Google Search" type="Submit">
                     <input id="google-lucky" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="Submit">
-
-         </div>
+                </div>
             </main>
             <footer class="page-footer">
                  <!-- Footer -->
                 <div id="footer">
                     <span id="top-span">
-                        <a class="span-links">Privacy</a>
-                        <a class="span-links">Terms</a>
-                        <a class="span-links">Settings</a>
+                        <a class="span-links" href="#" style="color:black;">Privacy</a>
+                        <a class="span-links" href="#" style="color:black;">Terms</a>
+                        <a class="span-links" href="#" style="color:black;">Settings</a>
                     </span>
                     <span id="bottom-span">
-                        <a class="span-links">Advertising</a>
-                        <a class="span-links">Business</a>
-                        <a class="span-links">How Search works</a>
+                        <a class="span-links" href="#" style="color:black;">Advertising</a>
+                        <a class="span-links" href="#" style="color:black;">Business</a>
+                        <a class="span-links" href="#" style="color:black;">How Search works</a>
                     </span>
                 </div>
             </footer>
+        </div>
     </body>
 
 </html>
