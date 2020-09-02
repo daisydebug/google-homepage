@@ -1,4 +1,4 @@
-# google-homepage
+# google-homepage 
 This is a project to deconstruct and reconstruct the Google homepage.
 
 I was assigned to perform a self-reflection at the end of the project to list
