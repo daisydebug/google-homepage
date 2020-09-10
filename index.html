@@ -4,118 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <!-- Note to self: #id .class -->
-        <style>
-            body{
-                background-color: rgb(255, 255, 255);
-            }
-            .wrapper{
-                margin:1em;
-            }
-            .top-left-links{
-                display:inline-block;
-                margin: 7px 0px 0px 10px;
-                float:left;
-                position:absolute;
-                font-size:13px;
-                opacity:0.75;
-            }
-            #about{
-                padding-left:15px;
-            }
-            #store{
-                padding-left:15px;
-            }
-            .top-right-links{
-                display:inline-block;
-                float:right;
-                margin: 7px 0px 0px 0px;
-                font-size:13px;
-                opacity:0.75;
-            }
-            #gmail{
-                padding-right:15px;
-            }
-            #images{
-                padding-right:15px;
-            }
-            #glyph{
-                display:inline-block;
-                float:right;
-                font-size:18px;
-                padding-right:15px;
-                opacity: 0.75;
-            }
-            #sign-in-button{
-                display:inline-block;
-                line-height: 28px;
-                float:right;
-                padding:0px 12px 0px 12px;
-                font-size:13px;
-                font-weight:bold;
-                border:1px solid #4285f4;
-                border-radius:2px;
-                color:white;
-                background-color:rgb(67,135,253);
-            }
-            .span-links{
-                display:inline;
-                float:center;
-                padding:18px;
-                font-size:13px;
-                opacity:0.75;
-            }
-            .page-main{
-                text-align:center;
-            }
-            #main{
-                padding-top:12em;
-            }
-            #search-bar{
-            }
-            .search-term{
-                font-size:16px;
-                /* display:flex; */
-                line-height:34px;
-            }
-            .buttons-under-bar{
-                margin:1em;
-                padding:1em;
-            }
-            #google-search{
-
-            }
-            #google-lucky{
-
-            }
-            .page-footer{
-                text-align:center;
-            }
-            #top-span{
-                float:right;
-            }
-            #bottom-span{
-                float:left;
-            }
-        </style>
     </head>
     <body>
-        <div class="wrapper">
-            <!-- Top Left Links -->
-            <div class="top-left-links">
-                <a id="about" href="#" style="color:black;">About</a>
-                <a id="store" href="#" style="color:black;">Store</a>
-            </div>
-            <!-- Top Right Links -->
-            <div class="top-right-links">
-                <!-- Sign In Button -->
-                <button id="sign-in-button" role="button">Sign In</button>
-                <!-- Glyph -->
-                <a id="glyph" title="Google apps" role="button" style="color:black"> <span class="glyphicon glyphicon-th"></span></a>
-                <a id="gmail" href="#" style="color:black;">Gmail</a>
-                <a id="images" href="#" style="color:black;">Images</a>
+        <div id="viewport" class="viewport">
+            <div id="top-links-div">
+                <!-- Top Left Links -->
+                <span class="top-left-links">
+                    <a id="about" href="#" style="color:black;">About</a>
+                    <a id="store" href="#" style="color:black;">Store</a>
+                </span>
+                <!-- Top Right Links -->
+                <span class="top-right-links">
+                    <a id="gmail" href="#" style="color:black;">Gmail</a>
+                    <a id="images" href="#" style="color:black;">Images</a>
+                    <!-- Glyph -->
+                    <a id="glyph" title="Google apps" role="button" style="color:black"> <span class="glyphicon glyphicon-th"></span></a>                    
+                    <!-- Sign In Button -->
+                    <a id="sign-in-button" role="button">Sign In</a>
+
+                </span>
             </div>
             <main class="page-main">
                 <!-- Google Logo -->
@@ -123,34 +33,34 @@
                     <img id="google-logo" alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
                 </div>
                 <!-- Search bar -->
-                <div class="wrap">
-                    <div id="search-bar" style="text-align:center">
+                <div class="search-wrap">
+                    <div id="search-bar">
                         <input class="search-term" type="text">
                             <!-- Magnifying Glass image -->
-                            <svg focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <svg id="magnifying-glass" focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
                                 </path>
                             </svg>
                     </div>
                 </div>
                 <!-- Buttons under search bar -->
-                <div class="buttons-under-bar" style="text-align:center">
-                    <input id="google-search" value="Google Search" aria-label="Google Search" type="Submit">
-                    <input id="google-lucky" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="Submit">
+                <div id="buttons-under-bar-div" style="text-align:center">
+                    <input id="google-search" class="buttons-under-bar" value="Google Search" aria-label="Google Search" type="Submit">
+                    <input id="google-lucky" class="buttons-under-bar" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="Submit">
                 </div>
             </main>
-            <footer class="page-footer">
+            <footer id="page-footer">
                  <!-- Footer -->
                 <div id="footer">
-                    <span id="top-span">
-                        <a class="span-links" href="#" style="color:black;">Privacy</a>
-                        <a class="span-links" href="#" style="color:black;">Terms</a>
-                        <a class="span-links" href="#" style="color:black;">Settings</a>
-                    </span>
                     <span id="bottom-span">
-                        <a class="span-links" href="#" style="color:black;">Advertising</a>
-                        <a class="span-links" href="#" style="color:black;">Business</a>
-                        <a class="span-links" href="#" style="color:black;">How Search works</a>
+                        <a class="bottom-links" href="#" style="color:black;">Advertising</a>
+                        <a class="bottom-links" href="#" style="color:black;">Business</a>
+                        <a class="bottom-links" href="#" style="color:black;">How Search works</a>
+                    </span>
+                    <span id="top-span">
+                        <a class="bottom-links" href="#" style="color:black;">Privacy</a>
+                        <a class="bottom-links" href="#" style="color:black;">Terms</a>
+                        <a class="bottom-links" href="#" style="color:black;">Settings</a>
                     </span>
                 </div>
             </footer>
